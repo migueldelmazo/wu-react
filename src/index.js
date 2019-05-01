@@ -67,8 +67,7 @@ const getInputValue = (ev) => {
   if (target.tagName === 'INPUT') {
     if (target.type === 'checkbox' || target.type === 'radio') {
       return target.checked
-    }
-    if (target.type !== 'button' && target.type !== 'submit') {
+    } else if (target.type !== 'button' && target.type !== 'submit') {
       return target.value
     }
   }

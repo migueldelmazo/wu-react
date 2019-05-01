@@ -2,9 +2,10 @@
   "name": "wu-reactjs",
   "version": "0.0.1",
   "description": "React JS module for Wu framework",
-  "main": "src/index.js",
+  "main": "build/index.js",
   "scripts": {
-    "start": "react-scripts start"
+    "postinstall": "babel src --out-dir build",
+    "format:js": "./node_modules/.bin/esformatter -i --config .formatrc 'src/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -23,11 +24,12 @@
     "url": "https://github.com/migueldelmazo/wu-reactjs/issues"
   },
   "homepage": "https://github.com/migueldelmazo/wu-reactjs#readme",
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4"
+  },
   "devDependencies": {
-    "lodash": "^4.17.11",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "^3.0.0",
-    "wu": "git+https://github.com/migueldelmazo/wu.git#v0.0.1"
+    "react-scripts": "^3.0.0"
   }
 }
