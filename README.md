@@ -154,7 +154,7 @@ export default class MyView extends WuReactComponent {
 }
 // 'sendLogin' is executed with 'email@email.com' argument
 ```
-
+___
 ### `initialState()`
 In **initialState** method you can define the view initial state, without having to do this in the view constructor.
 
@@ -172,12 +172,17 @@ export default class MyView extends WuReactComponent {
   render () {...}
 }
 ```
-
+___
 ### `setState()`
 Until now with **React JS** you could pass an **object** to setState, like `this.setState({ email: 'email@email.com' })`.
 Now with **Wu React JS** you can also pass as the first argument the **name of the property** and
 as a second argument **the value**, like `this.setState('email', 'email@email.com')`.
 This is useful for calling setState from the HTML code. You can use dot notation.
+
+**Arguments:**
+* `path (string) [required]:` view state path property.
+* `value (*) [required]:` value.
+
 
 **Example:**
 ```javascript
@@ -200,9 +205,12 @@ export default class MyView extends WuReactComponent {
 }
 // view state will be { status: { open: true } }
 ```
-
+___
 ### `toggleState()`
 **toggleState** is a wrapper of **setState** method to toggle the value of a property of the state.
+
+**Arguments:**
+* `path (string) [required]:` view state path property.
 
 **Example:**
 ```javascript
@@ -225,7 +233,7 @@ export default class MyView extends WuReactComponent {
 }
 // view state will be { status: { open: true } }
 ```
-
+___
 ### `getClassName()`
 Returns one or the other class name depending on the value of a variable.
 
