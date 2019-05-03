@@ -19,9 +19,9 @@ method as the first parameter: **a string or an array of strings**.
 
 ```javascript
 import React from 'react'
-import WuReactComponent from 'wu-reactjs'
+import WuReact from 'wu-reactjs'
 
-export default class MyView extends WuReactComponent {
+export default class MyView extends WuReact.Component {
   onChange () {
     return 'user.name'
   }
@@ -54,9 +54,9 @@ Bind a function (and its parameters) to be executed when the user trigger an eve
 **Example: execute a view method**
 ```javascript
 import React from 'react'
-import WuReactComponent from 'wu-reactjs'
+import WuReact from 'wu-reactjs'
 
-export default class MyView extends WuReactComponent {
+export default class MyView extends WuReact.Component {
   sendLogin () {...}
   render () {
     return (
@@ -74,9 +74,9 @@ wu.create('setter', 'sendLogin', {...})
 
 // file view.js
 import React from 'react'
-import WuReactComponent from 'wu-reactjs'
+import WuReact from 'wu-reactjs'
 
-export default class MyView extends WuReactComponent {
+export default class MyView extends WuReact.Component {
   render () {
     return (
       <button onClick={ this.onEv('sendLogin') }>Login</button>
@@ -89,9 +89,9 @@ export default class MyView extends WuReactComponent {
 **Example: execute a method with arguments**
 ```javascript
 import React from 'react'
-import WuReactComponent from 'wu-reactjs'
+import WuReact from 'wu-reactjs'
 
-export default class MyView extends WuReactComponent {
+export default class MyView extends WuReact.Component {
   render () {
     return (
       <button onClick={ this.onEv('sendLogin', 'email@email.com', '12345678') }>Login</button>
@@ -104,9 +104,9 @@ export default class MyView extends WuReactComponent {
 **Example: execute several methods at the same time**
 ```javascript
 import React from 'react'
-import WuReactComponent from 'wu-reactjs'
+import WuReact from 'wu-reactjs'
 
-export default class MyView extends WuReactComponent {
+export default class MyView extends WuReact.Component {
   render () {
     return (
       <button onClick={ this.onEv(
@@ -122,9 +122,9 @@ export default class MyView extends WuReactComponent {
 **Example: the method receives the input value as the last argument**
 ```javascript
 import React from 'react'
-import WuReactComponent from 'wu-reactjs'
+import WuReact from 'wu-reactjs'
 
-export default class MyView extends WuReactComponent {
+export default class MyView extends WuReact.Component {
   initialState () {
     return { email: '' }
   }
@@ -140,9 +140,9 @@ export default class MyView extends WuReactComponent {
 **Example: replace the value of the argument for the state value**
 ```javascript
 import React from 'react'
-import WuReactComponent from 'wu-reactjs'
+import WuReact from 'wu-reactjs'
 
-export default class MyView extends WuReactComponent {
+export default class MyView extends WuReact.Component {
   initialState () {
     return { email: 'email@email.com'}
   }
@@ -161,9 +161,9 @@ In **initialState** method you can define the view initial state, without having
 **Example:**
 ```javascript
 import React from 'react'
-import WuReactComponent from 'wu-reactjs'
+import WuReact from 'wu-reactjs'
 
-export default class MyView extends WuReactComponent {
+export default class MyView extends WuReact.Component {
   initialState () {
     return {
       open: false
@@ -187,9 +187,9 @@ This is useful for calling setState from the HTML code. You can use dot notation
 **Example:**
 ```javascript
 import React from 'react'
-import WuReactComponent from 'wu-reactjs'
+import WuReact from 'wu-reactjs'
 
-export default class MyView extends WuReactComponent {
+export default class MyView extends WuReact.Component {
   initialState () {
     return {
       status: {
@@ -215,9 +215,9 @@ ___
 **Example:**
 ```javascript
 import React from 'react'
-import WuReactComponent from 'wu-reactjs'
+import WuReact from 'wu-reactjs'
 
-export default class MyView extends WuReactComponent {
+export default class MyView extends WuReact.Component {
   initialState () {
     return {
       status: {
@@ -247,9 +247,9 @@ Returns one or the other class name depending on the value of a variable.
 **Example:**
 ```javascript
 import React from 'react'
-import WuReactComponent from 'wu-reactjs'
+import WuReact from 'wu-reactjs'
 
-export default class MyView extends WuReactComponent {
+export default class MyView extends WuReact.Component {
   initialState () {
     return { open: true }
   }
